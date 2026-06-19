@@ -53,8 +53,8 @@ I built it in two passes. **v0** was the baseline — base-64 U-Net, raw weights
 
 ## 📚 What I learned
 
-- **How DDPM actually works** — implementing the forward noising and reverse denoising by hand made the whole process click.
-- **EMA cleans up samples** — sampling from an exponential moving average of the weights reduces frame-to-frame jitter, basically for free.
+- **How DDPM actually works** — implementing the forward noising and reverse denoising.
+- **EMA cleans up samples** — sampling from an exponential moving average of the weights reduces frame-to-frame jitter.
 - **Loss flatlines, quality doesn't** — the MSE plateaus by ~epoch 3, yet sample quality keeps improving; the limit was model *capacity*, not undertraining.
 - **bf16's exponent range matters** — the precision format, not just the bit count, is what made the bigger model train stably.
 
