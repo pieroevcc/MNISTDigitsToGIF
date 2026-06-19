@@ -44,7 +44,7 @@ def main():
             canvas = np.repeat(np.repeat(canvas, a.scale, 0), a.scale, 1)
         out_frames.append(canvas)
 
-    imageio.mimsave(a.out, out_frames, duration=a.duration)
+    imageio.mimsave(a.out, out_frames, duration=a.duration, loop=0)
     print(f"wrote {a.out}: {rows}x{cols} grid, {T} frames, "
           f"{out_frames[0].shape[1]}x{out_frames[0].shape[0]} px")
 
