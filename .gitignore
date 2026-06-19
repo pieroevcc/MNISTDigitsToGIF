@@ -1,0 +1,18 @@
+# Python virtual environment
+.venv/
+__pycache__/
+*.pyc
+
+# Dataset (auto-downloads from torchvision on first run)
+mnist/
+
+# Model checkpoints (large binaries, regenerate via training)
+*.pt
+
+# Training logs
+*.log
+
+# Generated GIFs are kept (samples/ and generations/) — comment the next
+# lines out if you'd rather not version them:
+samples_*/
+# generations/
