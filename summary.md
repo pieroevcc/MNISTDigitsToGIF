@@ -17,8 +17,7 @@ See [`v0.md`](v0.md) and [`v1.md`](v1.md) for the full writeups.
 | Checkpoint size | ~152 MB (`checkpoints/ckpt_baseline_v0_e30.pt`) | ~1.4 GB (`checkpoints/ckpt_epoch30.pt`) |
 | Training notes | converges by epoch ~3, then flatlines | fp16 diverged to NaN at epoch 9 -> switched to bf16, resumed from epoch 8, finished clean |
 
-Logs live in `logs/` (`train_baseline_v0.log`, `train_v1.log`); per-epoch preview GIFs in
-`samples_v0/` (v0) and `samples_v1/` (v1).
+Logs live in `logs/` (`train_baseline_v0.log`, `train_v1.log`).
 
 ## Qualitative verdict
 On a same-seed A/B (seed 1234), **v1 strokes are noticeably bolder and cleaner**, while
@@ -30,4 +29,3 @@ The MSE curves are nearly indistinguishable, so the loss alone understates the v
 ## Comparison artifacts
 - 2x4 same-seed grid: `generations/grid_v1_vs_v0_seed1234.gif`
 - Per-digit 0-9 v1-vs-v0 grid: `generations/comparison_by_digit.gif`
-- Source clips: `generations/v0_seed1234/` and `generations/v1_seed1234/`

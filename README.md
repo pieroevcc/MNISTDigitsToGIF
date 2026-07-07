@@ -139,9 +139,7 @@ video_diffusion.py   model + train/sample
 make_grid.py         GIF grid stitcher
 checkpoints/         ckpt_epoch30.pt (v1), ckpt_baseline_v0_e30.pt (v0)
 logs/                training logs
-samples_v0/          v0 per-epoch preview GIFs
-samples_v1/          v1 per-epoch preview GIFs
-generations/         comparison grids + source clips (see below)
+generations/         comparison grids (see below)
 v0.md / v1.md        per-run writeups
 summary.md           v0 vs v1 comparison
 ```
@@ -149,7 +147,6 @@ summary.md           v0 vs v1 comparison
 Comparison artifacts in `generations/`:
 - `grid_v1_vs_v0_seed1234.gif` — 2×4 same-seed grid (top v1, bottom v0)
 - `comparison_by_digit.gif` — per-digit 0–9 grid (top v1, bottom v0)
-- `v1_seed1234/`, `v0_seed1234/`, `by_digit/` — source clips
 
 </details>
 
