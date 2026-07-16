@@ -8,12 +8,12 @@ You give it nothing but noise; a hand-written 3D U-Net DDPM denoises that noise 
 
 ![Per-digit comparison grid: top row v1 base-96, bottom row v0 base-64](generations/comparison_by_digit.gif)
 
-```
-pure noise  [4, 1, 10, 32, 32]
-  → 3D U-Net ε-prediction       (predict the noise at each step)
-  → 1000-step DDPM reverse loop  (iteratively denoise)
-  → EMA weights                  (cleaner, less jittery frames)
-  → 10-frame GIF of a bouncing digit
+```mermaid
+flowchart TD
+    A["🎲 Pure noise<br/>[4, 1, 10, 32, 32]"] --> B[🧠 3D U-Net ε-prediction<br/>predict the noise at each step]
+    B --> C[🔁 1000-step DDPM reverse loop<br/>iteratively denoise]
+    C --> D[⚖️ EMA weights<br/>cleaner, less jittery frames]
+    D --> E[🎞️ 10-frame GIF<br/>bouncing digit]
 ```
 
 ---
